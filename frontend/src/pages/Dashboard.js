@@ -1,4 +1,3 @@
-// src/pages/Dashboard.js
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -54,8 +53,8 @@ export default function Dashboard() {
       </div>
 
       {/* Sorting/Filtering */}
-      <div className="flex gap-4 items-center p-5">
-        <span>Sort by:</span>
+      <div className="flex gap-4 items-center p-5 ">
+        <span>Sort by: </span>
         <select
           className="p-2 border rounded dark:bg-gray-800 dark:text-white"
           value={sortKey}
@@ -68,24 +67,26 @@ export default function Dashboard() {
         </select>
       </div>
 
-      {/* Chart */}
-      <div className="p-5">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={sortedCities}>
-            <XAxis dataKey="city" stroke={darkMode ? "#fff" : "#000"} />
-            <YAxis stroke={darkMode ? "#fff" : "#000"} />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: darkMode ? "#333" : "#fff",
-                color: darkMode ? "#fff" : "#000",
-              }}
-            />
-            <Legend />
-            <Bar dataKey="temperature" fill="#8884d8" name="Temperature (°C)" />
-            <Bar dataKey="comfortScore" fill="#82ca9d" name="Comfort Score" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+        {/* Chart */}
+        <div className="px-10 pb-8 ">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
+            <h2 className="text-lg font-semibold mb-4">
+              Temperature vs Comfort Score
+            </h2>
+
+            <ResponsiveContainer width="100%" height={320}>
+              <BarChart data={sortedCities}>
+                <XAxis dataKey="city" stroke={darkMode ? "#fff" : "#000"} />
+                <YAxis stroke={darkMode ? "#fff" : "#000"} />
+                <Tooltip />
+                <Legend />
+
+                <Bar dataKey="temperature" fill="#6366f1" radius={[6,6,0,0]} />
+                <Bar dataKey="comfortScore" fill="#22c55e" radius={[6,6,0,0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
 
       {/* City Cards */}
       <div className="grid md:grid-cols-3 gap-4 p-5">
