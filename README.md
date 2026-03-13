@@ -25,29 +25,29 @@ A modern, responsive dashboard displaying weather and comfort scores for multipl
    cd backend
 
 2. Install dependencies:
-    npm install
+   - npm install
 
 3. Create a .env file in the backend folder:
    - OPENWEATHER_KEY=your_openweathermap_api_key
    - PORT=5000
 
 4. Start the server:
-    npm start
+   - npm start
 
 5. API endpoint available at: http://localhost:5000/api/weather
 
 ### Frontend 
 
 1. Navigate to frontend folder:
-    cd frontend
+   - cd frontend
 
 2. Install dependencies:
-    npm install
+   - npm install
 
 3. Start the frontend:
-    npm start
+   - npm start
 
-4. Open http://localhost:3000 in your browser.
+4. Open http: //localhost:3000 in your browser.
 
 ## Comfort Index Formula
 
