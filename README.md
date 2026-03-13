@@ -21,8 +21,7 @@ A modern, responsive dashboard displaying weather and comfort scores for multipl
 ### Backend
 
 1. Navigate to backend folder:  
-   ```bash
-   cd backend
+   - cd backend
 
 2. Install dependencies:
    - npm install
