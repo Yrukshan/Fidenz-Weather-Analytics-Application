@@ -27,7 +27,7 @@ A modern, responsive dashboard displaying weather and comfort scores for multipl
    - npm install
 
 3. Create a .env file in the backend folder:
-   - OPENWEATHER_KEY=your_openweathermap_api_key
+   - OPENWEATHER_KEY= your_openweathermap_api_key
    - PORT=5000
 
 4. Start the server:
