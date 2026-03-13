@@ -49,9 +49,10 @@ export default function Dashboard() {
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
+        </button> 
       </div>
 
+      <br />
       {/* Sorting/Filtering */}
       <div className="flex gap-4 items-center p-5 ">
         <span>Sort by: </span>
